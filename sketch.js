@@ -82,7 +82,7 @@ function setup() {
 
   //ball1.debug = true
   //ball5.debug = true
-  cue.setCollider('rectangle',400,0,132,20);
+  cue.setCollider('rectangle',460,0,20,20);
 
   cueBall.setCollider('rectangle',0,0,40,40,270);
   ball1.setCollider('circle',0,0,19);
@@ -138,8 +138,9 @@ function draw() {
         cue.pointTo(cueBall.x, cueBall.y);
     } 
     //console.log("Cue direction-->"+cue.x + " " + cue.y);
-    
+
     if (cue.isTouching(cueBall)) {
+    
       cueBall.setSpeedAndDirection(-20);
       gameState = "end";
       timeFlag = "start"
@@ -197,7 +198,7 @@ function draw() {
       }
     }*/
 
-    console.log(balls[0].velocityX)
+    //console.log(balls[0].velocityX)
 
     
 
@@ -205,8 +206,8 @@ function draw() {
       cueBall.visible = false
     }
 
-    console.log(cue.x + "x")
-    console.log(cue.y + "y")
+    //console.log(cue.x + "x")
+    //console.log(cue.y + "y")
   
   drawSprites();
   
