@@ -208,6 +208,11 @@ function draw() {
     if (cueBall.isTouching(pocket1)) {
       cueBall.visible = false
     }
+    if(cueBall.x < 0 || cueBall.x > width || cueBall.y > height || cueBall.y <0 ){
+       cueBall.x = 395
+       cueBall.y = 368
+       cueBall.setVelocity(0,0)
+    }
 
     //console.log(cue.x + "x")
     //console.log(cue.y + "y")
